@@ -158,8 +158,8 @@ export default function Home() {
       </div>
 
       <footer className="border-t border-white/5 py-8 text-center text-gray-500 text-sm">
-        <p className="font-semibold text-gray-400">TikTok на максимум © 2024</p>
-        <p className="mt-1">Розроблено з ❤️ для учнів курсу</p>
+        <p className="font-semibold text-gray-400">TikTok на максимум © 2026</p>
+        <p className="mt-1">Розроблено з любов'ю твій наставник Віталік</p>
       </footer>
     </main>
   );
