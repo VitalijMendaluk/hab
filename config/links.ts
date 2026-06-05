@@ -5,36 +5,13 @@
 // ============================================
 
 export const LINKS = {
-  // --- 5 кроків ---
-  STEP_1_ROADMAP: "https://contentplan30.vercel.app/",
-  STEP_2_SCENARIO: "https://tiktokanalizator.vercel.app/",
-  STEP_3_CONTENT_PLAN: "https://bazaznan.vercel.app/",
-  STEP_4_KNOWLEDGE_BASE: "https://strahcamery.vercel.app/",
-  STEP_5_SALES_SCRIPTS: "LINK_5", // замінити на реальне посилання
+  // --- Бонуси ---
+  BONUS_1_ROADMAP: "https://contentplan30.vercel.app/",
+  BONUS_2_SCENARIO: "https://tiktokanalizator.vercel.app/",
+  BONUS_3_KNOWLEDGE_BASE: "https://bazaznan.vercel.app/",
+  BONUS_4_CAMERA_FEAR: "https://strahcamery.vercel.app/",
+  BONUS_5_SALES_SCRIPT: "LINK_5", // замінити на реальне посилання
 
   // --- Додаткові матеріали ---
-  GOOGLE_DRIVE: "GOOGLE_DRIVE_LINK", // замінити на реальне посилання
-
-  // --- Відеоуроки ---
-  // Додай посилання для кожного уроку нижче
-  LESSON_1: "LESSON_LINK_1",
-  LESSON_2: "LESSON_LINK_2",
-  LESSON_3: "LESSON_LINK_3",
-  LESSON_4: "LESSON_LINK_4",
-  LESSON_5: "LESSON_LINK_5",
-  LESSON_6: "LESSON_LINK_6",
-  LESSON_7: "LESSON_LINK_7",
-  LESSON_8: "LESSON_LINK_8",
-  LESSON_9: "LESSON_LINK_9",
-  LESSON_10: "LESSON_LINK_10",
-  LESSON_11: "LESSON_LINK_11",
-  LESSON_12: "LESSON_LINK_12",
-  LESSON_13: "LESSON_LINK_13",
-  LESSON_14: "LESSON_LINK_14",
-  LESSON_15: "LESSON_LINK_15",
-  LESSON_16: "LESSON_LINK_16",
-  LESSON_17: "LESSON_LINK_17",
-  LESSON_18: "LESSON_LINK_18",
-  LESSON_19: "LESSON_LINK_19",
-  LESSON_20: "LESSON_LINK_20",
+  GOOGLE_DRIVE: "https://drive.google.com/drive/folders/1JoaV1OOU_7o1fhQktFjTLBBHikOI4oV6?hl=ru",
 };
