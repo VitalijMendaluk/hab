@@ -7,6 +7,16 @@ import Header from "@/components/Header";
 import StepCard from "@/components/StepCard";
 import { LINKS } from "@/config/links";
 
+const EXTRA_MATERIALS = [
+  { title: "Базові знання", link: LINKS.EXTRA_1_BASE },
+  { title: "Аналіз та оформлення профілю", link: LINKS.EXTRA_2_PROFILE },
+  { title: "Долаємо страх камери", link: LINKS.EXTRA_3_CAMERA },
+  { title: "Контент-план", link: LINKS.EXTRA_4_CONTENT_PLAN },
+  { title: "Монтаж відео", link: LINKS.EXTRA_5_EDITING },
+  { title: "Публікація та аналітика", link: LINKS.EXTRA_6_ANALYTICS },
+  { title: "Алгоритми TikTok", link: LINKS.EXTRA_7_ALGORITHM },
+];
+
 const BONUSES = [
   {
     stepLabel: "Бонус 1",
@@ -111,48 +121,39 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="flex items-center gap-3 mb-6"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-8 rounded-full" style={{ background: "linear-gradient(180deg, #7C3AED, #EC4899)" }} />
-              <h2 className="text-2xl font-bold text-white">Додаткові матеріали</h2>
-            </div>
-
-            <div
-              className="relative overflow-hidden rounded-2xl border border-white/10 p-8"
-              style={{ background: "linear-gradient(135deg, #7C3AED10, #EC489910)" }}
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 pointer-events-none"
-                style={{ background: "radial-gradient(circle, #7C3AED, transparent)", transform: "translate(30%, -30%)" }} />
-
-              <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                <div
-                  className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #7C3AED30, #EC489930)" }}
-                >
-                  <FolderOpen className="w-8 h-8" style={{ color: "#9F67FF" }} />
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-1">Додаткові матеріали</h3>
-                  <p className="text-gray-400">Бонусні матеріали, шаблони та ресурси від наставника</p>
-                </div>
-
-                <a
-                  href={LINKS.GOOGLE_DRIVE}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-xl"
-                  style={{
-                    background: "linear-gradient(135deg, #7C3AED, #EC4899)",
-                    boxShadow: "0 4px 20px rgba(124, 58, 237, 0.4)",
-                  }}
-                >
-                  <FolderOpen className="w-4 h-4" />
-                  Відкрити Google Диск
-                </a>
-              </div>
-            </div>
+            <div className="w-1 h-8 rounded-full" style={{ background: "linear-gradient(180deg, #7C3AED, #EC4899)" }} />
+            <h2 className="text-2xl font-bold text-white">Додаткові матеріали</h2>
           </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {EXTRA_MATERIALS.map((item, i) => (
+              <motion.a
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.06 }}
+                className="group flex items-center gap-4 rounded-2xl p-5 border border-white/10 bg-white/5 hover:border-purple-500/40 hover:bg-white/8 transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div
+                  className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+                  style={{ background: "linear-gradient(135deg, #7C3AED22, #EC489922)" }}
+                >
+                  <FolderOpen className="w-5 h-5" style={{ color: "#9F67FF" }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-white text-sm leading-tight">{item.title}</p>
+                  <p className="text-gray-500 text-xs mt-0.5">Google Диск</p>
+                </div>
+                <span className="shrink-0 text-purple-400 text-lg group-hover:translate-x-1 transition-transform">→</span>
+              </motion.a>
+            ))}
+          </div>
         </section>
       </div>
 
