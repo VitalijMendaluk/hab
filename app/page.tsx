@@ -11,7 +11,7 @@ const BONUSES = [
   {
     stepLabel: "Бонус 1",
     icon: Map,
-    title: "Роадмап на 30 днів",
+    title: "Контент-план на 30 днів",
     description: "Отримай персональний план під свою нішу",
     link: LINKS.BONUS_1_ROADMAP,
   },
