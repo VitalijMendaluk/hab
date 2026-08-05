@@ -11,6 +11,7 @@ export const LINKS = {
   BONUS_3_KNOWLEDGE_BASE: "https://bazaznan.vercel.app/",
   BONUS_4_CAMERA_FEAR: "https://strahcamery.vercel.app/",
   BONUS_5_SALES_SCRIPT: "https://drive.google.com/drive/folders/1JoaV1OOU_7o1fhQktFjTLBBHikOI4oV6?hl=ru",
+  BONUS_6_PRESENTATION: "https://canva.link/cridweqsffx1nez",
 
   // --- Додаткові матеріали ---
   EXTRA_1_BASE: "https://drive.google.com/drive/folders/15koPnWwQ5xI2k413cqgC-pJMu7GEBSgx?hl=ru",

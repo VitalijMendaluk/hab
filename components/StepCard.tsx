@@ -12,6 +12,7 @@ interface StepCardProps {
   link: string;
   completed: boolean;
   onToggle: () => void;
+  price?: string;
 }
 
 export default function StepCard({
@@ -23,6 +24,7 @@ export default function StepCard({
   link,
   completed,
   onToggle,
+  price,
 }: StepCardProps) {
   return (
     <motion.div
@@ -65,7 +67,18 @@ export default function StepCard({
 
       {/* Content */}
       <h3 className="font-bold text-white text-lg mb-1 leading-tight">{title}</h3>
-      <p className="text-gray-400 text-sm mb-5 leading-relaxed">{description}</p>
+      <p className="text-gray-400 text-sm mb-4 leading-relaxed">{description}</p>
+
+      {/* Price badge */}
+      {price && (
+        <div className="flex items-center gap-2 mb-4">
+          <span className="text-gray-500 line-through text-sm">{price}</span>
+          <span className="text-xs font-bold px-2 py-0.5 rounded-full"
+            style={{ background: "linear-gradient(135deg, #7C3AED, #EC4899)", color: "#fff" }}>
+            Безкоштовно
+          </span>
+        </div>
+      )}
 
       {/* Button */}
       <a

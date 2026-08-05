@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 export default function Header({ bonusesCompleted }: HeaderProps) {
-  const progressPercent = Math.round((bonusesCompleted / 5) * 100);
+  const progressPercent = Math.round((bonusesCompleted / 6) * 100);
 
   return (
     <header className="relative overflow-hidden">

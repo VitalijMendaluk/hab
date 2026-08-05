@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Map, Video, BookOpen, Camera, MessageCircle, FolderOpen } from "lucide-react";
+import { Map, Video, BookOpen, Camera, MessageCircle, FolderOpen, Presentation } from "lucide-react";
 import Header from "@/components/Header";
 import StepCard from "@/components/StepCard";
 import { LINKS } from "@/config/links";
@@ -53,10 +53,18 @@ const BONUSES = [
     description: "Готові фрази для продажу в переписці",
     link: LINKS.BONUS_5_SALES_SCRIPT,
   },
+  {
+    stepLabel: "Бонус 6",
+    icon: Presentation,
+    title: "Шаблон презентації ваших послуг/товару",
+    description: "Готовий Canva-шаблон для продаючої презентації",
+    link: LINKS.BONUS_6_PRESENTATION,
+    price: "$39",
+  },
 ];
 
 export default function Home() {
-  const [completedBonuses, setCompletedBonuses] = useState<boolean[]>(Array(5).fill(false));
+  const [completedBonuses, setCompletedBonuses] = useState<boolean[]>(Array(6).fill(false));
 
   useEffect(() => {
     try {
@@ -93,7 +101,7 @@ export default function Home() {
             <div className="w-1 h-8 rounded-full" style={{ background: "linear-gradient(180deg, #7C3AED, #EC4899)" }} />
             <div>
               <h2 className="text-2xl font-bold text-white">Бонуси</h2>
-              <p className="text-gray-400 text-sm">Виконано {bonusesCompleted} з 5</p>
+              <p className="text-gray-400 text-sm">Виконано {bonusesCompleted} з 6</p>
             </div>
           </motion.div>
 
@@ -109,6 +117,7 @@ export default function Home() {
                 link={bonus.link}
                 completed={completedBonuses[i]}
                 onToggle={() => toggleBonus(i)}
+                price={"price" in bonus ? bonus.price : undefined}
               />
             ))}
           </div>
