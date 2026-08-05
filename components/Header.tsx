@@ -47,7 +47,7 @@ export default function Header({ bonusesCompleted }: HeaderProps) {
         >
           <div className="flex justify-between text-sm text-gray-400 mb-2">
             <span>Виконано бонусів</span>
-            <span className="text-purple-400 font-semibold">{bonusesCompleted} з 5</span>
+            <span className="text-purple-400 font-semibold">{bonusesCompleted} з 10</span>
           </div>
           <div className="h-2 bg-white/10 rounded-full overflow-hidden">
             <motion.div

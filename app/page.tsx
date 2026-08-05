@@ -32,6 +32,7 @@ const BONUSES = [
     title: "Генератор сценарію для твого відео",
     description: "Створи сценарій першого відео за 2 хвилини",
     link: LINKS.BONUS_2_SCENARIO,
+    price: "$19",
   },
   {
     stepLabel: "Бонус 3",
