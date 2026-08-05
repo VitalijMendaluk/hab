@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Map, Video, BookOpen, Camera, MessageCircle, FolderOpen, Presentation } from "lucide-react";
+import { Map, Video, BookOpen, Camera, MessageCircle, FolderOpen, Presentation, Sparkles, CheckSquare, Flame, AlertTriangle } from "lucide-react";
 import Header from "@/components/Header";
 import StepCard from "@/components/StepCard";
 import { LINKS } from "@/config/links";
@@ -24,6 +24,7 @@ const BONUSES = [
     title: "Контент-план на 30 днів",
     description: "Отримай персональний план під свою нішу",
     link: LINKS.BONUS_1_ROADMAP,
+    price: "$29",
   },
   {
     stepLabel: "Бонус 2",
@@ -38,6 +39,7 @@ const BONUSES = [
     title: "База знань",
     description: "Задай будь-яке питання — відповідь за 10 секунд",
     link: LINKS.BONUS_3_KNOWLEDGE_BASE,
+    price: "$39",
   },
   {
     stepLabel: "Бонус 4",
@@ -45,6 +47,7 @@ const BONUSES = [
     title: "Долання страху камери",
     description: "Практичні техніки для впевненої роботи на камеру",
     link: LINKS.BONUS_4_CAMERA_FEAR,
+    price: "$49",
   },
   {
     stepLabel: "Бонус 5",
@@ -52,6 +55,7 @@ const BONUSES = [
     title: "Скрипт продажів",
     description: "Готові фрази для продажу в переписці",
     link: LINKS.BONUS_5_SALES_SCRIPT,
+    price: "$29",
   },
   {
     stepLabel: "Бонус 6",
@@ -61,10 +65,40 @@ const BONUSES = [
     link: LINKS.BONUS_6_PRESENTATION,
     price: "$39",
   },
+  {
+    stepLabel: "Бонус 7",
+    icon: Sparkles,
+    title: "AI-пакет промтів",
+    description: "Готові промти для створення контенту з допомогою AI",
+    link: LINKS.BONUS_7_AI_PROMPTS,
+    price: "$49",
+  },
+  {
+    stepLabel: "Бонус 8",
+    icon: CheckSquare,
+    title: "Чек-лист продаючого профілю",
+    description: "Покроковий список для ідеального оформлення профілю",
+    link: LINKS.BONUS_8_CHECKLIST,
+    price: "$9",
+  },
+  {
+    stepLabel: "Бонус 9",
+    icon: Flame,
+    title: "ТОП 30 гачків, які збирають перегляди",
+    description: "Готові фрази-гачки для перших секунд твого відео",
+    link: LINKS.BONUS_9_HOOKS,
+  },
+  {
+    stepLabel: "Бонус 10",
+    icon: AlertTriangle,
+    title: "Топ 10 помилок, які вбивають перегляди",
+    description: "Розбір найпоширеніших помилок новачків у TikTok",
+    link: LINKS.BONUS_10_MISTAKES,
+  },
 ];
 
 export default function Home() {
-  const [completedBonuses, setCompletedBonuses] = useState<boolean[]>(Array(6).fill(false));
+  const [completedBonuses, setCompletedBonuses] = useState<boolean[]>(Array(10).fill(false));
 
   useEffect(() => {
     try {
@@ -101,7 +135,7 @@ export default function Home() {
             <div className="w-1 h-8 rounded-full" style={{ background: "linear-gradient(180deg, #7C3AED, #EC4899)" }} />
             <div>
               <h2 className="text-2xl font-bold text-white">Бонуси</h2>
-              <p className="text-gray-400 text-sm">Виконано {bonusesCompleted} з 6</p>
+              <p className="text-gray-400 text-sm">Виконано {bonusesCompleted} з 10</p>
             </div>
           </motion.div>
 
